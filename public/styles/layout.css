@@ -3,9 +3,11 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -25,10 +27,77 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-   width: 450px;
-   margin: 120px auto 80px;
-   background-color: #fff;
-   top: 140px;
-   padding: 2.5em 1em 3em;
- }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Istok Web', sans-serif;
+}
+
+main {
+  width: 450px;
+  margin: 120px auto 80px;
+  background-color: #fff;
+  top: 140px;
+  padding: 2.5em 1em 3em;
+}
+
+/* =====================
+    Tweeter Cards
+=======================*/
+article.tweet {
+  width: 95%;
+  border: 1px solid #969696;
+  border-radius: 5px;
+  margin: 0 auto 1em;
+}
+
+article.tweet header {
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 0.5em 0.8em;
+}
+
+article.tweet > header > img {
+  height: 50px;
+  width: 50px;
+}
+
+article.tweet > header > p {
+   margin: 0.4em 0 0 auto;
+   font-size: 0.9em;
+}
+
+article.tweet > header > h2 {
+   margin: 0 0.5em;
+}
+
+article.tweet .tweet-body {
+  padding: 0 0.6em;
+}
+
+article.tweet footer {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.7em;
+  padding: 0 0.7em;
+}
+
+article.tweet footer div.footer-icons {
+  margin: 0.7em 0 0 auto;
+}
+
+article.tweet footer div.footer-icons img {
+  height: 20px;
+  opacity: 0.5;
+}
+
+
+article.tweet:hover {
+  border: 1px solid #666666;
+}
+
+article.tweet:hover header {
+  background-color: #eeeeee;
+}
+
+article.tweet:hover footer div.footer-icons img {
+  opacity: 0.8;
+}

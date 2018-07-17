@@ -8,6 +8,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Istok+Web:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
   <!-- App CSS -->
@@ -35,6 +36,7 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
 
+    <!-- Create new tweet form -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
@@ -44,39 +46,73 @@
       </form>
     </section>
 
-    <!-- Content-Type: application/x-www-form-urlencoded -->
-    <h2>Tweets:</h2>
-    <p>
-      Mew love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater). Hit you unexpectedly always ensure to lay down in such a manner that tail can
-      lightly brush human's nose mark territory. Sit by the fire. Lick sellotape spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce sleep on keyboard, yet i'm bored inside, let me out i'm lonely outside, let me in i can't make up
-      my mind whether to go in or out, guess i'll just stand partway in and partway out, contemplating the universe for half an hour how dare you nudge me with your foot?!?! leap into the air in greatest offense! yet jump launch to pounce upon little
-      yarn mouse, bare fangs at toy run hide in litter box until treats are fed. Cat not kitten around lick human with sandpaper tongue for ooh, are those your $250 dollar sandals? lemme use that as my litter box for intrigued by the shower kitty poochy,
-      meowzer. Lick yarn hanging out of own butt intently sniff hand. I can haz pet me pet me don't pet me lick arm hair so cough furball give attitude.
-    </p>
-    <p>
-      I just saw other cats inside the house and nobody ask me before using my litter box favor packaging over toy but brown cats with pink ears so find empty spot in cupboard and sleep all day. Eat plants, meow, and throw up because i ate plants a nice warm
-      laptop for me to sit on but lie in the sink all day i like frogs and 0 gravity, but meow to be let in. Rub whiskers on bare skin act innocent destroy couch, and find something else more interesting annoy kitten brother with poking, or sleep in the
-      bathroom sink. Cats secretly make all the worlds muffins. Fall over dead (not really but gets sypathy) fight an alligator and win yet headbutt owner's knee yet purr for sleep everywhere, but not in my bed for eat plants, meow, and throw up because
-      i ate plants and stare at wall turn and meow stare at wall some more meow again continue staring . Disappear for four days and return home with an expensive injury; bite the vet i like cats because they are fat and fluffy and scream at teh bath
-      destroy couch, so Gate keepers of hell or stares at human while pushing stuff off a table. And sometimes switches in french and say "miaou" just because well why not kitty loves pigs.
-    </p>
-    <p>
-      Licks your face meow meow eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter litter kitter kitty litty little kitten big roar roar feed me. Relentlessly pursues moth sit in box. Scratch me there, elevator
-      butt mew, yet i cry and cry and cry unless you pet me, and then maybe i cry just for fun yet hide at bottom of staircase to trip human and chase ball of string but see owner, run in terror. Lick plastic bags throwup on your pillow. Woops poop hanging
-      from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now pooping rainbow while flying in a toasted bread costume in space but get suspicious of own shadow then
-      go play with toilette paper, so groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked but sit and stare jump around on couch, meow constantly until given food.
-    </p>
-    <p>
-      Chase mice hopped up on catnip, or climb leg cats go for world domination. Meow meow, i tell my human knock dish off table head butt cant eat out of my own dish poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy
-      fur-balls toilet paper attack claws fluff everywhere meow miao french ciao litterbox give me attention or face the wrath of my claws for adventure always but trip on catnip. Dream about hunting birds scamper and going to catch the red dot today
-      going to catch the red dot today claw your carpet in places everyone can see - why hide my amazing artistic clawing skills? yet roll over and sun my belly pelt around the house and up and down stairs chasing phantoms. Meowzer freak human out make
-      funny noise mow mow mow mow mow mow success now attack human. Play riveting piece on synthesizer keyboard peer out window, chatter at birds, lure them to mouth Gate keepers of hell yet friends are not food. Sleep nap.
-    </p>
-    <p>
-      Take a big fluffing crap 💩 lick left leg for ninety minutes, still dirty try to jump onto window and fall while scratching at wall yet groom forever, stretch tongue and leave it slightly out, blep i could pee on this if i had the energy bleghbleghvomit
-      my furball really tie the room together. Purr while eating howl uncontrollably for no reason. Sleep. Pee in the shoe rub face on owner. Stand in front of the computer screen chase imaginary bugs pee in human's bed until he cleans the litter box
-      kitty poochy purr as loud as possible, be the most annoying cat that you can, and, knock everything off the table.
-    </p>
+    <!-- Main timeline of tweets -->
+    <div id="timeline">
+
+      <article class="tweet">
+        <header>
+          <img src="https://api.adorable.io/avatars/50/aa.png" alt="aaronfordnet">
+          <h2>Aaron Ford</h2>
+          <p>@aaronfordnet</p>
+        </header>
+        <div class="tweet-body">
+          <p>How did the hipster burn his tongue? He drank his coffee before it was cool</p>
+        </div>
+        <footer>
+          <p>2 days ago</p>
+          <div class="footer-icons">
+            <img src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
+            <img src="https://png.icons8.com/windows/64/000000/available-updates.png">
+            <img src="https://png.icons8.com/windows/64/000000/hearts.png">
+          </div>
+        </footer>
+      </article>
+
+      <article class="tweet">
+        <header>
+          <img src="https://api.adorable.io/avatars/50/bb.png" alt="aaronfordnet">
+          <h2>Bill Gates</h2>
+          <p>@microbill</p>
+        </header>
+        <div class="tweet-body">
+          <p>What did the mom coffee bean say to the kid coffee bean? You're grounded.</p>
+        </div>
+        <footer>
+          <p>3 days ago</p>
+          <div class="footer-icons">
+            <img src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
+            <img src="https://png.icons8.com/windows/64/000000/available-updates.png">
+            <img src="https://png.icons8.com/windows/64/000000/hearts.png">
+          </div>
+        </footer>
+      </article>
+
+      <article class="tweet">
+        <header>
+          <img src="https://api.adorable.io/avatars/50/cc.png" alt="aaronfordnet">
+          <h2>Bob Saget</h2>
+          <p>@bsaget</p>
+        </header>
+        <div class="tweet-body">
+          <p>Hey, wanna hear a joke about ghosts?
+          <br/><br/>
+          That's the spirit</p>
+        </div>
+        <footer>
+          <p>5 days ago</p>
+          <div class="footer-icons">
+            <img src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
+            <img src="https://png.icons8.com/windows/64/000000/available-updates.png">
+            <img src="https://png.icons8.com/windows/64/000000/hearts.png">
+          </div>
+        </footer>
+      </article>
+
+    </div>
+
+
+
+
   </main>
 
 </body>
