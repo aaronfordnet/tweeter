@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
   width: 450px;
-  margin: 120px auto 80px;
+  margin: 80px auto 80px;
   background-color: #fff;
   top: 140px;
   padding: 2.5em 1em 3em;
@@ -47,11 +47,14 @@ article.tweet {
   border: 1px solid #969696;
   border-radius: 5px;
   margin: 0 auto 1em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 article.tweet header {
   display: flex;
   background-color: #f3f3f3;
+  border-radius: 5px;
   padding: 0.5em 0.8em;
 }
 
@@ -92,6 +95,7 @@ article.tweet footer div.footer-icons img {
 
 article.tweet:hover {
   border: 1px solid #666666;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
 }
 
 article.tweet:hover header {
@@ -99,5 +103,5 @@ article.tweet:hover header {
 }
 
 article.tweet:hover footer div.footer-icons img {
-  opacity: 0.8;
+  opacity: 0.7;
 }
