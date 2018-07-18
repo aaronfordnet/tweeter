@@ -47,8 +47,7 @@ article.tweet {
   border: 1px solid #969696;
   border-radius: 5px;
   margin: 0 auto 1em;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transition: all 0.2s cubic-bezier(.25,.8,.25,1);
 }
 
 article.tweet header {
@@ -61,6 +60,7 @@ article.tweet header {
 article.tweet > header > img {
   height: 50px;
   width: 50px;
+  border-radius: 15%;
 }
 
 article.tweet > header > p {
@@ -76,15 +76,20 @@ article.tweet .tweet-body {
   padding: 0 0.6em;
 }
 
+article.tweet .tweet-body p {
+  word-break: break-word;
+}
+
 article.tweet footer {
   display: flex;
+  justify-content: space-between;
   border-top: 1px solid #f0f0f0;
   font-size: 0.7em;
   padding: 0 0.7em;
 }
 
 article.tweet footer div.footer-icons {
-  margin: 0.7em 0 0 auto;
+  margin: 0.7em 0 0 0;
 }
 
 article.tweet footer div.footer-icons img {
@@ -95,7 +100,7 @@ article.tweet footer div.footer-icons img {
 
 article.tweet:hover {
   border: 1px solid #666666;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24);
 }
 
 article.tweet:hover header {

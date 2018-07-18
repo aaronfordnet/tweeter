@@ -1,46 +1,46 @@
 [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": {
-        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": {
+          "small":   "https://api.adorable.io/avatars/80/a",
+          "regular": "https://api.adorable.io/avatars/80/a",
+          "large":   "https://api.adorable.io/avatars/80/a"
+        },
+        "handle": "@SirIsaac"
       },
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+      "content": {
+        "text": "How did the hipster burn his tongue? He drank his coffee before it was cool"
       },
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+      "created_at": 1531182737000
     },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Johann von Goethe",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": {
+          "small":   "https://api.adorable.io/avatars/80/b",
+          "regular": "https://api.adorable.io/avatars/80/b",
+          "large":   "https://api.adorable.io/avatars/80/b"
+        },
+        "handle": "@rdge" },
+      "content": {
+        "text": "What did the mom coffee bean say to the kid coffee bean? You're grounded."
       },
-      "handle": "@johann49"
+      "created_at": 1531614737000
     },
-    "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-    },
-    "created_at": 1461113796368
-  }
+    {
+      "user": {
+        "name": "Johann von Goethe",
+        "avatars": {
+          "small":   "https://api.adorable.io/avatars/80/cc",
+          "regular": "https://api.adorable.io/avatars/80/cc",
+          "large":   "https://api.adorable.io/avatars/80/cc"
+        },
+        "handle": "@johann49"
+      },
+      "content": {
+        "text": "Hey, wanna hear a joke about ghosts?<br/><br/> That's the spirit"
+      },
+      "created_at": 1531701137000
+    }
 ]
