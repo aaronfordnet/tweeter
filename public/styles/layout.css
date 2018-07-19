@@ -33,29 +33,28 @@ h1, h2, h3, h4, h5, h6 {
 
 main {
   max-width: 450px;
-  margin: 60px auto 0;
-  background-color: #fff;
-  top: 140px;
-  padding: 2.5em 0 2em;
+  min-width: 380px;
+  margin: 0 auto;
+  background-color: #eee;
+  padding: 6em 0 0;
 }
 
-
 /* =====================
-          Cards
+      Bleat Cards
 =======================*/
 article.tweet {
-  width: 95%;
-  border: 1px solid #969696;
-  border-radius: 5px;
-  margin: 0 auto 1em;
+  border-radius: 0 0 0 0;
+  width: 100%;
+  margin: 0 auto 8px;
   transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 article.tweet header {
   display: flex;
-  background-color: #f3f3f3;
-  border-radius: 5px;
-  padding: 0.5em 0.8em;
+  background-color: #fff;
+  padding: 0.5em 1em 0.5em 0.5em;
+  border-radius: 0 0 0 0;
 }
 
 article.tweet > header > img {
@@ -75,10 +74,13 @@ article.tweet > header > h2 {
 }
 
 article.tweet .tweet-body {
-  padding: 0 0.6em;
+  padding: 0 1em 1em 4.4em;
+  background-color: #fff;
 }
 
 article.tweet .tweet-body p {
+  margin: 0;
+  font-size: 0.9em;
   word-break: break-word;
 }
 
@@ -87,7 +89,9 @@ article.tweet footer {
   justify-content: space-between;
   border-top: 1px solid #f0f0f0;
   font-size: 0.7em;
-  padding: 0 0.7em;
+  padding: 0 0.7em 0 6.4em;
+  background-color: #fff;
+  border-radius: 0 0 0 0;
 }
 
 article.tweet footer div.footer-icons {
@@ -100,27 +104,32 @@ article.tweet footer div.footer-icons img {
 }
 
 article.tweet:hover {
-  border: 1px solid #666666;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24);
+
 }
 
 article.tweet:hover header {
-  background-color: #eeeeee;
+  background-color: #f9f9f9;
+}
+
+article.tweet:hover .tweet-body{
+  background-color: #f9f9f9;
+}
+
+article.tweet:hover footer{
+  background-color: #f9f9f9;
 }
 
 article.tweet:hover footer div.footer-icons img {
   opacity: 0.7;
 }
 
-
-
 /* =====================
        Footer
 =======================*/
 
 #footer {
-  background-color: #00a087;
-  color:  #e8fdff;
+  background-color: #3F51B5;
+  color:  #b0b9e2;
   font-size: 0.8em;
   line-height: 0.8em;
   max-width: 450px;
@@ -128,15 +137,19 @@ article.tweet:hover footer div.footer-icons img {
   padding: 0.5em 1em 0.5em;
   text-align: center;
   margin-bottom: 2em;
-  border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: #bdc3c7 0 5px 5px;
-  -moz-box-shadow: #bdc3c7 0 5px 5px;
-  box-shadow: #bdc3c7 0 5px 5px;
-  -moz-border-radius-bottomleft: 8px;
-  -webkit-border-bottom-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -webkit-border-bottom-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 0 0 5px 5px;
   margin-bottom: 2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#footer {
+  font-size: 0.7em;
+}
+
+#footer a {
+  color: #b0b9e2;
+}
+
+#footer .pink {
+  color: #c1769f;
 }

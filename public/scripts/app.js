@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
         <h2>${data.user.name}</h2>
         <p>${data.user.handle}</p>
       </header>
-      <div class="tweet-body">
+      <section class="tweet-body">
         <p>${escape(data.content.text)}</p>
-      </div>
+      </section>
       <footer>
         <p>${date}</p>
         <div class="footer-icons">
@@ -50,10 +50,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // POST NEW TWEET
   $('.new-tweet form').on('submit', function(event){
     event.preventDefault();
+    let input = (event.target.elements.text.value).trim();
     let $text = $(this).serialize();
     // Validate tweet length
-    $('.new-tweet .error-msg').slideUp('fast');
-    if (validateForm($text)) {
+    $('.new-tweet .error-msg').hide();
+    if (validateForm(input)) {
       // fade form and disable submit button until post complete
       $('section.new-tweet').fadeTo(200 , 0.5);
       $('section.new-tweet form input[type=submit]').attr('disabled', 'disabled');
@@ -74,13 +75,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   // VALIDATE FORM
   function validateForm(input) {
-    let formText = input.split('=')[1].trim();
-    //console.log(formText);
-    if (formText.length <= 0) {
-      $('.new-tweet .error-msg').slideDown('fast').text(`Tweet can't be empty`);
+    if (input.length <= 0) {
+      $('.new-tweet .error-msg').slideDown('fast').text(`Bleat can't be empty`);
       return;
-    } else if (formText.length > 140 ) {
-      $('.new-tweet .error-msg').slideDown('fast').text(`Tweet over 140 characters`)
+    } else if (input.length > 140 ) {
+      $('.new-tweet .error-msg').slideDown('fast').text(`Bleat over 140 characters`)
       return;
     }
     return true;
@@ -101,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   loadTweets();
 
   // COMPOSE BUTTON TOGGLES NEW TWEET FORM
-  $('#nav-bar .compose').click(function(){
+  $('#nav-bar .submit-btn').click(function(){
     $("html, body").animate({ scrollTop: 0 }, 'slow');
     $('section.new-tweet').slideToggle( 'fast', function() {
       $('section.new-tweet textarea').select();

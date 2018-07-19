@@ -3,15 +3,15 @@
 
 <head>
   <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
+  <title>Bleater - Home Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Istok+Web:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -33,14 +33,14 @@
   <!-- Top nav bar (fixed) -->
   <nav id="nav-bar">
       <div class="nav-left">
-        <span class="header">Bleater</span>
+        <span class="header">Bleater.</span>
         </div>
       <div class="nav-center">
     <img class="logo" src="/images/goatlogo.png">
 
     </div>
     <div class="nav-right">
-      <button class="compose">Compose</button>
+      <button class="submit-btn"><i class="fas fa-plus"></i></button>
     </div>
 
   </nav>
@@ -53,7 +53,7 @@
       <h2>Compose Bleat</h2>
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="What's happening?"></textarea>
-        <input type="submit" value="Bleat">
+        <input type="submit" value="Bleat It" class="submit-btn">
         <span class="error-msg"></span>
         <span class="counter">140</span>
       </form>
@@ -68,10 +68,14 @@
 
   <!-- Footer -->
   <footer id="footer">
-    <p>&copy; 2018 Bleater.</p>
-    <p>Made with ♥ by goats for goats. </p>
+    <p><span class="pink">♥</span> 2018 Bleater.</p>
+    <p><strong>Bleat</strong> &ndash; The characteristic cry of a sheep or goat</p>
+
   </footer>
 
 </body>
 
 </html>
+
+
+<!-- <div class="credit">Icons made by <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> and <a href="http://icons8.com" title="icons8">icons8.com</a></div> -->
