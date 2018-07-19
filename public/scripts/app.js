@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function renderTweets(data) {
     for (let tweets in data) {
       let $tweet = createTweetElement(data[tweets]);
-      $('#timeline').append($tweet);
+      $('#timeline').prepend($tweet);
     }
   };
 
@@ -97,8 +97,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
   }
 
-  loadTweets();
-
   // COMPOSE BUTTON TOGGLES NEW TWEET FORM
   $('#nav-bar .submit-btn').click(function(){
     $("html, body").animate({ scrollTop: 0 }, 'slow');
@@ -106,5 +104,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       $('section.new-tweet textarea').select();
     });
   });
+
+  loadTweets();
 
 });

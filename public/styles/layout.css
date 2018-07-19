@@ -65,11 +65,12 @@ article.tweet > header > img {
 
 article.tweet > header > p {
    margin: 0.4em 0 0 auto;
-   font-size: 0.9em;
+   font-size: 0.8em;
 }
 
 article.tweet > header > h2 {
   word-break: break-word;
+  font-size: 1.4em;
   margin: 0 0.5em;
 }
 
