@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Istok+Web:700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
 
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -30,8 +32,17 @@
 
   <!-- Top nav bar (fixed) -->
   <nav id="nav-bar">
-    <img class="logo" src="/images/bird.png">
-    <span class="header">Tweeter</span>
+      <div class="nav-left">
+        <span class="header">Bleater</span>
+        </div>
+      <div class="nav-center">
+    <img class="logo" src="/images/goatlogo.png">
+
+    </div>
+    <div class="nav-right">
+      <button class="compose">Compose</button>
+    </div>
+
   </nav>
 
   <!-- Page-specific (main) content here -->
@@ -39,10 +50,11 @@
 
     <!-- Create new tweet form -->
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+      <h2>Compose Bleat</h2>
       <form action="/tweets/" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
+        <textarea name="text" placeholder="What's happening?"></textarea>
+        <input type="submit" value="Bleat">
+        <span class="error-msg"></span>
         <span class="counter">140</span>
       </form>
     </section>
@@ -54,27 +66,12 @@
 
   </main>
 
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2018 Bleater.</p>
+    <p>Made with ♥ by goats for goats. </p>
+  </footer>
+
 </body>
 
 </html>
-
-
-
-<!-- <article class="tweet">
-  <header>
-    <img src="https://api.adorable.io/avatars/50/aa.png" alt="aaronfordnet">
-    <h2>Aaron Ford</h2>
-    <p>@aaronfordnet</p>
-  </header>
-  <div class="tweet-body">
-    <p>How did the hipster burn his tongue? He drank his coffee before it was cool</p>
-  </div>
-  <footer>
-    <p>2 days ago</p>
-    <div class="footer-icons">
-      <img src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
-      <img src="https://png.icons8.com/windows/64/000000/available-updates.png">
-      <img src="https://png.icons8.com/windows/64/000000/hearts.png">
-    </div>
-  </footer>
-</article> -->

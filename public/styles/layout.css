@@ -20,7 +20,7 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 /*
@@ -32,15 +32,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 main {
-  width: 450px;
-  margin: 80px auto 80px;
+  max-width: 450px;
+  margin: 60px auto 0;
   background-color: #fff;
   top: 140px;
-  padding: 2.5em 1em 3em;
+  padding: 2.5em 0 2em;
 }
 
+
 /* =====================
-    Tweeter Cards
+          Cards
 =======================*/
 article.tweet {
   width: 95%;
@@ -69,7 +70,8 @@ article.tweet > header > p {
 }
 
 article.tweet > header > h2 {
-   margin: 0 0.5em;
+  word-break: break-word;
+  margin: 0 0.5em;
 }
 
 article.tweet .tweet-body {
@@ -97,7 +99,6 @@ article.tweet footer div.footer-icons img {
   opacity: 0.5;
 }
 
-
 article.tweet:hover {
   border: 1px solid #666666;
     box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24);
@@ -109,4 +110,33 @@ article.tweet:hover header {
 
 article.tweet:hover footer div.footer-icons img {
   opacity: 0.7;
+}
+
+
+
+/* =====================
+       Footer
+=======================*/
+
+#footer {
+  background-color: #00a087;
+  color:  #e8fdff;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0.5em 1em 0.5em;
+  text-align: center;
+  margin-bottom: 2em;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: #bdc3c7 0 5px 5px;
+  -moz-box-shadow: #bdc3c7 0 5px 5px;
+  box-shadow: #bdc3c7 0 5px 5px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 2em;
 }

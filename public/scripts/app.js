@@ -6,6 +6,8 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
+
+  // CREATE TWEET ARTICLE FROM TEMPLATE
   function createTweetElement(data) {
     let date = moment(data.created_at).fromNow();
     let $article = $('<article>').addClass('tweet');
@@ -16,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         <p>${data.user.handle}</p>
       </header>
       <div class="tweet-body">
-        <p>${data.content.text}</p>
+        <p>${escape(data.content.text)}</p>
       </div>
       <footer>
         <p>${date}</p>
@@ -30,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
     return $article;
   };
 
+  // ESCAPE FUNCTION TO PREVENT XSS
+  function escape(text) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+  }
+
   // RENDER ALL TWEETS IN DATABASE
   function renderTweets(data) {
     for (let tweets in data) {
@@ -38,34 +47,40 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   };
 
-
   // POST NEW TWEET
   $('.new-tweet form').on('submit', function(event){
     event.preventDefault();
     let $text = $(this).serialize();
-
+    // Validate tweet length
+    $('.new-tweet .error-msg').slideUp('fast');
     if (validateForm($text)) {
+      // fade form and disable submit button until post complete
+      $('section.new-tweet').fadeTo(200 , 0.5);
+      $('section.new-tweet form input[type=submit]').attr('disabled', 'disabled');
       $.ajax({
         type: "POST",
         url: '/tweets',
         data: $text
+      }).done(function() {
+        $('section.new-tweet').fadeTo( "fast" , 1);
+        $('section.new-tweet form input[type=submit]').removeAttr("disabled");
+        $('.new-tweet textarea').val('');
+        $('section.new-tweet .counter').text('140');
+        $('#timeline').empty();
+        loadTweets();
       });
-      $('.new-tweet textarea').val('');
-
-      // Clear timeline and load all tweets - needs to wait until BD is updated!
-      $('#timeline').empty();
-      loadTweets();
     };
   });
 
   // VALIDATE FORM
   function validateForm(input) {
-    let formText = input.split('=')[1];
+    let formText = input.split('=')[1].trim();
+    //console.log(formText);
     if (formText.length <= 0) {
-      alert('You must enter a tweet to send');
+      $('.new-tweet .error-msg').slideDown('fast').text(`Tweet can't be empty`);
       return;
     } else if (formText.length > 140 ) {
-      alert('Tweet too long - max 140 characters')
+      $('.new-tweet .error-msg').slideDown('fast').text(`Tweet over 140 characters`)
       return;
     }
     return true;
@@ -73,12 +88,24 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   //GET TWEETS
   function loadTweets() {
-    $.ajax('/tweets', { method: 'GET' })
-    .then(function (tweets) {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets'
+    })
+    .done(function (tweets) {
       //console.log('Success: ', tweets);
       renderTweets(tweets);
     });
   }
 
   loadTweets();
+
+  // COMPOSE BUTTON TOGGLES NEW TWEET FORM
+  $('#nav-bar .compose').click(function(){
+    $("html, body").animate({ scrollTop: 0 }, 'slow');
+    $('section.new-tweet').slideToggle( 'fast', function() {
+      $('section.new-tweet textarea').select();
+    });
+  });
+
 });
