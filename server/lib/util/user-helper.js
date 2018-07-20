@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const Chance = require("chance");
+const Chance = require('chance');
 const chance = new Chance();
 
 const md5 = require('md5');
@@ -9,15 +9,15 @@ module.exports = {
 
   generateRandomUser: () => {
     const gender    = chance.gender();
-    const firstName = chance.first({gender: gender});
+    const firstName = chance.first({ gender: gender });
     const lastName  = chance.last();
-    const userName  = firstName + " " + lastName;
+    const userName  = firstName + ' ' + lastName;
 
-    let userHandle = "@";
+    let userHandle = '@';
     if (Math.random() > 0.5) {
-      let prefix    = chance.prefix({gender: gender});
-      prefix = prefix.replace(".", "");
-      userHandle += prefix
+      let prefix    = chance.prefix({ gender: gender });
+      prefix = prefix.replace('.', '');
+      userHandle += prefix;
     }
 
     userHandle += lastName;
@@ -31,13 +31,13 @@ module.exports = {
     const avatars = {
       small:   `${avatarUrlPrefix}_50.png`,
       regular: `${avatarUrlPrefix}.png`,
-      large:   `${avatarUrlPrefix}_200.png`
-    }
+      large:   `${avatarUrlPrefix}_200.png`,
+    };
 
     return {
       name: userName,
       handle: userHandle,
-      avatars: avatars
+      avatars: avatars,
     };
-  }
+  },
 };

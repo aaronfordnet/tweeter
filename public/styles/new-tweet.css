@@ -1,6 +1,5 @@
 section.new-tweet {
   background-color: #fff;
-  border-radius: 0;
   margin: 0 0 1em;
   padding: 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -48,14 +47,3 @@ span.counter {
 .error {
   color: #f52578;
 }
-
-
-/* .new-tweet input {
-  background-color: #00ACEE;
-  border: 1px solid #0075a2;
-  border-radius: 100px;
-  color: #fff;
-  font-size: 0.9em;
-  padding: 0.3em 1em;
-  cursor: pointer;
-} */

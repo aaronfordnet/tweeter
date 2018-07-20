@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
 
-
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -31,12 +30,12 @@
 
   <!-- Top nav bar (fixed) -->
   <nav id="nav-bar">
-      <div class="nav-left">
-        <span class="header">Bleater.</span>
-        </div>
-      <div class="nav-center">
-    <img class="logo" src="/images/goatlogo.png">
 
+    <div class="nav-left">
+      <span class="header">Bleater.</span>
+    </div>
+    <div class="nav-center">
+      <img class="logo" src="/images/goatlogo.png">
     </div>
     <div class="nav-right">
       <button class="submit-btn"><i class="fas fa-plus"></i></button>
@@ -47,8 +46,9 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
 
-    <!-- Create new tweet form -->
+    <!-- Create new post form -->
     <section class="new-tweet">
+
       <h2>Compose Bleat</h2>
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="What's happening?"></textarea>
@@ -56,9 +56,10 @@
         <span class="error-msg"></span>
         <span class="counter">140</span>
       </form>
+
     </section>
 
-    <!-- Main timeline of tweets -->
+    <!-- Main timeline -->
     <div id="timeline">
 
     </div>
@@ -67,6 +68,7 @@
 
   <!-- Footer -->
   <footer id="footer">
+
     <p><span class="pink">♥</span> 2018 Bleater.</p>
     <p><strong>Bleat</strong> &ndash; The characteristic cry of a sheep or goat</p>
 
@@ -75,6 +77,3 @@
 </body>
 
 </html>
-
-
-<!-- <div class="credit">Icons made by <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> and <a href="http://icons8.com" title="icons8">icons8.com</a></div> -->

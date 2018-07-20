@@ -40,10 +40,9 @@ main {
 }
 
 /* =====================
-      Bleat Cards
+       Posts
 =======================*/
 article.tweet {
-  border-radius: 0 0 0 0;
   width: 100%;
   margin: 0 auto 8px;
   transition: all 0.2s cubic-bezier(.25,.8,.25,1);
@@ -54,7 +53,6 @@ article.tweet header {
   display: flex;
   background-color: #fff;
   padding: 0.5em 1em 0.5em 0.5em;
-  border-radius: 0 0 0 0;
 }
 
 article.tweet > header > img {
@@ -64,8 +62,8 @@ article.tweet > header > img {
 }
 
 article.tweet > header > p {
-   margin: 0.4em 0 0 auto;
-   font-size: 0.8em;
+  margin: 0.4em 0 0 auto;
+  font-size: 0.8em;
 }
 
 article.tweet > header > h2 {
@@ -90,9 +88,8 @@ article.tweet footer {
   justify-content: space-between;
   border-top: 1px solid #f0f0f0;
   font-size: 0.7em;
-  padding: 0 0.7em 0 6.4em;
+  padding: 0 1em 0 6.4em;
   background-color: #fff;
-  border-radius: 0 0 0 0;
 }
 
 article.tweet footer div.footer-icons {
@@ -102,10 +99,6 @@ article.tweet footer div.footer-icons {
 article.tweet footer div.footer-icons img {
   height: 20px;
   opacity: 0.5;
-}
-
-article.tweet:hover {
-
 }
 
 article.tweet:hover header {
@@ -131,7 +124,7 @@ article.tweet:hover footer div.footer-icons img {
 #footer {
   background-color: #3F51B5;
   color:  #b0b9e2;
-  font-size: 0.8em;
+  font-size: 0.7em;
   line-height: 0.8em;
   max-width: 450px;
   margin: 0 auto;
@@ -143,14 +136,17 @@ article.tweet:hover footer div.footer-icons img {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-#footer {
-  font-size: 0.7em;
-}
-
 #footer a {
   color: #b0b9e2;
 }
 
 #footer .pink {
   color: #c1769f;
+}
+
+
+@media (max-width: 700px) {
+  article.tweet footer div.footer-icons img {
+  padding-right: 1em;
+  }
 }

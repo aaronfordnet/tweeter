@@ -1,11 +1,6 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+// ** Client-side JS logic - wrapped in jQuery document ready function **
 
-document.addEventListener('DOMContentLoaded', function(event) {
-
+$(document).ready(function () {
 
   // CREATE TWEET ARTICLE FROM TEMPLATE
   function createTweetElement(data) {
@@ -48,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   };
 
   // POST NEW TWEET
-  $('.new-tweet form').on('submit', function(event){
+  $('.new-tweet form').on('submit', function (event) {
     event.preventDefault();
     let input = (event.target.elements.text.value).trim();
     let $text = $(this).serialize();
@@ -56,15 +51,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
     $('.new-tweet .error-msg').hide();
     if (validateForm(input)) {
       // fade form and disable submit button until post complete
-      $('section.new-tweet').fadeTo(200 , 0.5);
+      $('section.new-tweet').fadeTo(200, 0.5);
       $('section.new-tweet form input[type=submit]').attr('disabled', 'disabled');
       $.ajax({
-        type: "POST",
+        type: 'POST',
         url: '/tweets',
-        data: $text
-      }).done(function() {
-        $('section.new-tweet').fadeTo( "fast" , 1);
-        $('section.new-tweet form input[type=submit]').removeAttr("disabled");
+        data: $text,
+      }).done(function () {
+        $('section.new-tweet').fadeTo('fast', 1);
+        $('section.new-tweet form input[type=submit]').removeAttr('disabled');
         $('.new-tweet textarea').val('');
         $('section.new-tweet .counter').text('140');
         $('#timeline').empty();
@@ -78,10 +73,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     if (input.length <= 0) {
       $('.new-tweet .error-msg').slideDown('fast').text(`Bleat can't be empty`);
       return;
-    } else if (input.length > 140 ) {
-      $('.new-tweet .error-msg').slideDown('fast').text(`Bleat over 140 characters`)
+    } else if (input.length > 140) {
+      $('.new-tweet .error-msg').slideDown('fast').text(`Bleat over 140 characters`);
       return;
     }
+
     return true;
   }
 
@@ -89,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function loadTweets() {
     $.ajax({
       method: 'GET',
-      url: '/tweets'
+      url: '/tweets',
     })
     .done(function (tweets) {
       //console.log('Success: ', tweets);
@@ -98,13 +94,26 @@ document.addEventListener('DOMContentLoaded', function(event) {
   }
 
   // COMPOSE BUTTON TOGGLES NEW TWEET FORM
-  $('#nav-bar .submit-btn').click(function(){
-    $("html, body").animate({ scrollTop: 0 }, 'slow');
-    $('section.new-tweet').slideToggle( 'fast', function() {
+  $('#nav-bar .submit-btn').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+    $('section.new-tweet').slideToggle('fast', function () {
       $('section.new-tweet textarea').select();
     });
   });
 
   loadTweets();
 
+
 });
+
+
+
+// function deleteTweet(data) {
+//   $.ajax({
+//     method: 'POST',
+//     url: '/delete',
+//     data: data.user.name
+//   })
+//   .done(function (delData) {
+//     console.log(delData);
+// }

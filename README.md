@@ -16,3 +16,14 @@ This repository is the starter code for the project: Students will fork and clon
 - Express
 - Node 5.10.x or above
 - Moment
+- MongoDB
+
+## Heroku
+
+https://bleaterapp.herokuapp.com/
+
+
+## Credits
+
+Goat logo courtesy of http://www.flaticon.com
+Additional icons from http://www.icons8.com
