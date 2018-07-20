@@ -14,17 +14,20 @@ section.new-tweet {
   width: 100%;
   padding: 10px 5px;
   margin: 0 0 5px 0;
+  resize: none;
 }
 
 .new-tweet .error-msg {
-  font-size: 0.9em;
+  font-size: 0.8em;
   line-height: 0.9em;
   margin-left: 0.5em;
+  font-weight: bold;
+  color: #c1769f;
 }
 
 span.counter {
   float: right;
-  line-height: 1.5em;
+  line-height: 1em;
   padding-right: 5px;
 }
 
@@ -36,7 +39,7 @@ span.counter {
   color: #ecf0f1;
   transition: background-color .3s;
   font-size: 0.9em;
-  padding: 0.5em 1em;
+  padding: 0.8em 1.5em;
   cursor: pointer;
 }
 

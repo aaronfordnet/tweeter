@@ -42,7 +42,7 @@
   padding-right: 80px;
 }
 
-#nav-bar .nav-right .submit-btn {
+#nav-bar .nav-right .compose-btn {
   border-width: 0;
   outline: none;
   border-radius: 50%;
@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-#nav-bar .nav-right .submit-btn:hover {
+#nav-bar .nav-right .compose-btn:hover {
   background-color: #c1769f;
 }
 

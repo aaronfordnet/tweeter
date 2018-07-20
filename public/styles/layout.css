@@ -128,9 +128,9 @@ article.tweet:hover footer div.footer-icons img {
   line-height: 0.8em;
   max-width: 450px;
   margin: 0 auto;
-  padding: 0.5em 1em 0.5em;
+  padding: 1em 1em;
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 0.3em;
   border-radius: 0 0 5px 5px;
   margin-bottom: 2em;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -144,6 +144,17 @@ article.tweet:hover footer div.footer-icons img {
   color: #c1769f;
 }
 
+@media (max-width: 450px) {
+  #footer {
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 1em 1em 1.5em;
+  }
+
+  main {
+    padding: 6em 0.3em 0;
+  }
+}
 
 @media (max-width: 700px) {
   article.tweet footer div.footer-icons img {
