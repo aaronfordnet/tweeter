@@ -29,13 +29,11 @@ module.exports = function makeDataHelpers(db) {
 
     // Delete tweet
     deleteTweet: function (postId, callback) {
-      console.log('Here', postId);
       const ObjectId = require('mongodb').ObjectID;
       db.collection("tweets").remove({ '_id': ObjectId(postId)}, function(err, obj) {
         if (err) {
           console.log(err);
         }
-        console.log(obj);
       });
     },
 

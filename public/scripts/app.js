@@ -55,13 +55,11 @@ $(document).ready(function () {
     }
     $('.flag').on('click', function (event) {
       let $postId = $(event.target).closest('article').attr('id');
-      console.log($postId);
       $.ajax({
         type: 'DELETE',
-        url: `/tweets/${$postId}`,
+        url: `/tweets/delete/${$postId}`,
         data: $postId,
       }).done(function () {
-        console.log('done area');
         $('#timeline').empty();
         loadTweets();
       });
