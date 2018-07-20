@@ -6,8 +6,8 @@ section.new-tweet {
 }
 
 .new-tweet h2 {
-  border-bottom: 1px solid #969696;
   margin-top: 0;
+  margin-bottom: 0.3em
 }
 
 .new-tweet textarea {
@@ -21,30 +21,29 @@ section.new-tweet {
   font-size: 0.8em;
   line-height: 0.9em;
   margin-left: 0.5em;
-  font-weight: bold;
-  color: #c1769f;
 }
 
 span.counter {
   float: right;
   line-height: 1em;
   padding-right: 5px;
+  font-size: 0.9em;
 }
 
 .submit-btn {
   border-width: 0;
   outline: none;
-  border-radius: 2px;
+  border-radius: 3px;
   background-color: #6a79d4;
   color: #ecf0f1;
-  transition: background-color .3s;
+  transition: background-color .2s;
   font-size: 0.9em;
   padding: 0.8em 1.5em;
   cursor: pointer;
 }
 
 .submit-btn:hover, .submit-btn:focus {
-  background-color: #c1769f;
+  background-color: #4d5ec3;
 }
 
 .error {

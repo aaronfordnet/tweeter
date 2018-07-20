@@ -94,7 +94,7 @@ $(document).ready(function () {
   }
 
   // COMPOSE BUTTON TOGGLES NEW TWEET FORM
-  $('#nav-bar .submit-btn').click(function () {
+  $('#nav-bar .compose-btn').click(function () {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
     $('section.new-tweet').slideToggle('fast', function () {
       $('section.new-tweet textarea').select();
