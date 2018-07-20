@@ -7,7 +7,9 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 const MongoClient   = require("mongodb").MongoClient;
-const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
+const MONGODB_URI   = "mongodb://heroku_6ddvz92n:2m8ih9m3th1dm6qtte5v9g6s42@ds143461.mlab.com:43461/heroku_6ddvz92n";
+
+//const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
