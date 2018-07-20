@@ -2,10 +2,23 @@
 
 $(document).ready(function () {
 
+
+  // function deleteTweet(data) {
+  //   $.ajax({
+  //     method: 'POST',
+  //     url: '/delete',
+  //     data: data.user.name
+  //   })
+  //   .done(function (delData) {
+  //     console.log('Delete', delData);
+  // }
+
+
+
   // CREATE TWEET ARTICLE FROM TEMPLATE
   function createTweetElement(data) {
     let date = moment(data.created_at).fromNow();
-    let $article = $('<article>').addClass('tweet');
+    let $article = $('<article>').addClass('tweet').attr('id',`${data._id}`);
     $article.html(`
       <header>
         <img src=${data.user.avatars.small} alt=${data.user.name}>
@@ -18,7 +31,7 @@ $(document).ready(function () {
       <footer>
         <p>${date}</p>
         <div class="footer-icons">
-          <img src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
+          <img class="flag" src="https://png.icons8.com/windows/64/000000/flag.png" alt="flag">
           <img src="https://png.icons8.com/windows/64/000000/available-updates.png">
           <img src="https://png.icons8.com/windows/64/000000/hearts.png">
         </div>
@@ -40,6 +53,19 @@ $(document).ready(function () {
       let $tweet = createTweetElement(data[tweets]);
       $('#timeline').prepend($tweet);
     }
+    $('.flag').on('click', function (event) {
+      let $postId = $(event.target).closest('article').attr('id');
+      console.log($postId);
+      $.ajax({
+        type: 'DELETE',
+        url: `/tweets/${$postId}`,
+        data: $postId,
+      }).done(function () {
+        console.log('done area');
+        $('#timeline').empty();
+        loadTweets();
+      });
+    })
   };
 
   // POST NEW TWEET
@@ -88,7 +114,6 @@ $(document).ready(function () {
       url: '/tweets',
     })
     .done(function (tweets) {
-      //console.log('Success: ', tweets);
       renderTweets(tweets);
     });
   }
@@ -103,17 +128,4 @@ $(document).ready(function () {
 
   loadTweets();
 
-
 });
-
-
-
-// function deleteTweet(data) {
-//   $.ajax({
-//     method: 'POST',
-//     url: '/delete',
-//     data: data.user.name
-//   })
-//   .done(function (delData) {
-//     console.log(delData);
-// }
