@@ -1,6 +1,5 @@
 'use strict';
 
-// Basic express setup:
 require('dotenv').config();
 
 const PORT          = process.env.PORT;
@@ -9,9 +8,6 @@ const bodyParser    = require('body-parser');
 const app           = express();
 const MongoClient   = require('mongodb').MongoClient;
 const MONGODB_URI   = process.env.MONGODB_URI;
-
-//const MONGODB_URI   = 'mongodb://localhost:27017/tweeter';
-// 'mongodb://heroku_6ddvz92n:2m8ih9m3th1dm6qtte5v9g6s42@ds143461.mlab.com:43461/heroku_6ddvz92n';
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));

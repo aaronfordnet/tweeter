@@ -1,15 +1,14 @@
-# Tweeter Project
+# Bleater App
 
-Tweeter is a simple, single-page Twitter clone.
+**Bleat** – *The characteristic cry of a sheep or goat*
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+Bleater is a simple, single-page Twitter clone built with Node and Express, that allows users to post short messages on a timeline.
 
-## Getting Started
+It's like Twitter, except with goats.
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+## Heroku
+
+View project on Heroku at https://bleaterapp.herokuapp.com/
 
 ## Dependencies
 
@@ -17,13 +16,15 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 - Moment
 - MongoDB
-
-## Heroku
-
-https://bleaterapp.herokuapp.com/
-
+- Body-parser
 
 ## Credits
 
 Goat logo courtesy of http://www.flaticon.com
 Additional icons from http://www.icons8.com
+
+## Getting Started
+
+- Install all dependencies (using the `npm install` command).
+- Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+- Go to <http://localhost:8080/> in your browser.
