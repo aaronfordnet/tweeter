@@ -12,9 +12,9 @@ View project on Heroku at https://bleaterapp.herokuapp.com/
 
 ## Screenshots
 
-!["Desktop"](https://raw.githubusercontent.com/aaronfordnet/)
+!["Desktop"](https://github.com/aaronfordnet/tweeter/blob/master/docs/bleater-desktop.jpg)
 
-!["Mobile"](https://raw.githubusercontent.com/aaronfordnet/)
+!["Mobile"](https://github.com/aaronfordnet/tweeter/blob/master/docs/bleater-iphone.jpg)
 
 ## Dependencies
 
