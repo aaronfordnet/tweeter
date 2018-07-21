@@ -122,12 +122,11 @@ article.tweet:hover footer div.footer-icons img {
 =======================*/
 
 #footer {
-  background-color: #3F51B5;
-  color:  #b0b9e2;
+  background-color: #285d78;
+  color:  #7c9cad;
   font-size: 0.7em;
   line-height: 0.8em;
   max-width: 450px;
-  min-width: 380px;
   margin: 0 auto;
   padding: 1em 1em;
   text-align: center;
@@ -142,7 +141,7 @@ article.tweet:hover footer div.footer-icons img {
 }
 
 #footer .pink {
-  color: #c1769f;
+  color: #d56968;
 }
 
 /* =====================

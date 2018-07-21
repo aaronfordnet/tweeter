@@ -2,19 +2,6 @@
 
 $(document).ready(function () {
 
-
-  // function deleteTweet(data) {
-  //   $.ajax({
-  //     method: 'POST',
-  //     url: '/delete',
-  //     data: data.user.name
-  //   })
-  //   .done(function (delData) {
-  //     console.log('Delete', delData);
-  // }
-
-
-
   // CREATE TWEET ARTICLE FROM TEMPLATE
   function createTweetElement(data) {
     let date = moment(data.created_at).fromNow();

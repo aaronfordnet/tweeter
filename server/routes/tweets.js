@@ -16,7 +16,6 @@ module.exports = function (DataHelpers) {
     });
   });
 
-  // DELETE
   tweetsRoutes.delete('/delete/:id', function (req, res) {
     let postId = req.params.id;
     DataHelpers.deleteTweet(postId);

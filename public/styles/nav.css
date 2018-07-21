@@ -7,7 +7,7 @@
   left: 0;
   right: 0;
   top: 0;
-  background-color: #3F51B5;
+  background-color: #285d78;
   color:  #fff;
   padding: 0 1em;
   height: 80px;
@@ -46,7 +46,7 @@
   border-width: 0;
   outline: none;
   border-radius: 50%;
-  background-color: #6a79d4;
+  background-color: #d56969;
   color: #ecf0f1;
   transition: background-color .3s;
   font-size: 0.9em;
@@ -57,7 +57,12 @@
 }
 
 #nav-bar .nav-right .compose-btn:hover {
-  background-color: #c1769f;
+  background-color: #bf5f5e;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /* =====================

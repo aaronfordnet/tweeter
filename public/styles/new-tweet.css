@@ -34,7 +34,7 @@ span.counter {
   border-width: 0;
   outline: none;
   border-radius: 3px;
-  background-color: #6a79d4;
+  background-color: #d56969;
   color: #ecf0f1;
   transition: background-color .2s;
   font-size: 0.9em;
@@ -43,7 +43,7 @@ span.counter {
 }
 
 .submit-btn:hover, .submit-btn:focus {
-  background-color: #4d5ec3;
+  background-color: #bf5f5e;
 }
 
 .error {

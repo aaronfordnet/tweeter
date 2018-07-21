@@ -26,7 +26,6 @@ module.exports = function makeDataHelpers(db) {
         callback(null, tweets);
       });
     },
-
     // Delete tweet
     deleteTweet: function (postId, callback) {
       const ObjectId = require('mongodb').ObjectID;
@@ -36,6 +35,5 @@ module.exports = function makeDataHelpers(db) {
         }
       });
     },
-
   };
 };
